@@ -6,7 +6,10 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://content-extract-ui-dks-projects-e80df377.vercel.app',
+    credentials: true
+}));
 app.use(express.json());
 
 const HUGGINGFACE_API_TOKEN = process.env.HUGGINGFACE_API_KEY; // Optional for some models
