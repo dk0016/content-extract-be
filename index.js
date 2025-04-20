@@ -7,8 +7,8 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-    origin: 'https://content-extract-ui-dks-projects-e80df377.vercel.app',
-    credentials: true
+    origin: 'https://content-extract-ui.vercel.app',
+    methods: ['GET', 'POST'],
 }));
 app.use(express.json());
 
