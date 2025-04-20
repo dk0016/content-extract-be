@@ -41,7 +41,7 @@ async function queryHuggingFace(model, input, retries = 3) {
     }
 }
 
-app.get("/", (req, res) => {
+app.get("/api/status", (req, res) => {
     res.send("Api is running");
 })
 
